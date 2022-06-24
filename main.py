@@ -25,8 +25,8 @@ try:
 
     # 押された場合
     if beforeSwState != sw and sw == 0:
-      time.sleep(0.2)
       print('押された')
+      time.sleep(0.2)
       if random.randint(1, 2) == 2:
         GPIO.output(LedPins[SlotCount], GPIO.HIGH) # 点灯
         SlotMax += 1
@@ -38,13 +38,14 @@ try:
         time.sleep(0.2)
         if SlotMax == 3:
           # アタリ
-          for i in range(3):
+          for i in range(8):
             for Lpin in LedPins:
               GPIO.output(Lpin, GPIO.HIGH) # 点灯
-            time.sleep(0.3)
+              time.sleep(0.07)
+            time.sleep(0.1)
             for Lpin in LedPins:
               GPIO.output(Lpin, GPIO.LOW) # 消灯
-            time.sleep(0.3)
+            time.sleep(0.1)
         else:
           # ハズレ
           for Lpin in LedPins:
