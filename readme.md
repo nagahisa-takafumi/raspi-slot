@@ -1,5 +1,5 @@
 # raspberry pi
-raspberry piは4を使用しています。練習にやってみました。
+raspberry piは4を使用しています。
 
 ## 配線
 配線は配線図.pngをご覧ください。
